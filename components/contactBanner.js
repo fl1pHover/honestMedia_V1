@@ -6,22 +6,26 @@ const ContactBanner = ({ href }) => {
      return (
           <>
                <Stack
-                    direction="row"
+                    direction={{ base: "column", xl: "row" }}
                     justifyContent="space-between"
-                    alignItems="center"
+                    alignItems="flex-start"
                >
-                    <Text textStyle="bigText">
+                    <Text textStyle="bigText" lineHeight="1.3">
                          Get in
                          <span className="stroke__text"> Touch</span>
                     </Text>
                     <Box
-                         h="200px"
-                         w="200px"
+                         height={{ base: "auto", xl: "200px" }}
+                         width={{ base: "auto", xl: "200px" }}
+                         px={{ base: "40px", xl: "0" }}
+                         py={{ base: "15px", xl: "0" }}
                          display="grid"
                          placeItems="center"
                          backgroundColor="#303030"
-                         borderRadius="50%"
+                         borderRadius={{ base: "30px", xl: "50%" }}
                          transition="0.4s ease"
+                         whiteSpace="nowrap"
+                         textAlign="left"
                          _hover={{
                               backgroundColor: "mainOrange",
                          }}

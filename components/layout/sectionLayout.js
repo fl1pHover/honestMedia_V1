@@ -11,7 +11,7 @@ const SectionLayout = ({ children }) => {
                     xl: "main__container",
                }}
           >
-               <Box h="100px" />
+               {/* <Box h="100px" /> */}
                {children}
           </Container>
      );

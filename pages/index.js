@@ -37,6 +37,8 @@ import Review from "../components/review";
 
 import ContactBanner from "../components/contactBanner";
 
+import Profiles from "../components/profileCard";
+
 // Sidebar Info Links
 const SideLink = ({ href, children }) => {
      return (
@@ -109,16 +111,21 @@ export default function Home() {
                                         </Text>
                                    </Center>
                               </Stack>
-                              <Box
+                              <Text
                                    as="h1"
                                    textStyle="mainBiggerHeader"
                                    textAlign="center"
                               >
                                    Universe
-                              </Box>
+                              </Text>
                          </Stack>
 
-                         <Box position="absolute" left="0" bottom="2em">
+                         <Box
+                              position="absolute"
+                              left="0"
+                              bottom="2em"
+                              ml={{ base: "20px", sm: "50px" }}
+                         >
                               <MainCircleLink
                                    position="absolute"
                                    left="0"
@@ -133,9 +140,13 @@ export default function Home() {
                          <Box h="10em"></Box>
                     </Container>
                </Center>
-               <Center as="section" id="solution">
+
+               <Center as="section" id="solution" my="7em">
                     <SectionLayout>
-                         <Stack direction={{ base: "column", md: "row" }}>
+                         <Stack
+                              direction={{ base: "column", md: "row" }}
+                              mb="40px"
+                         >
                               <SectionHeader
                                    miniTitle="WHAT WE OFFER"
                                    headerTitle="Unlock Revenue Growth for Your Business"
@@ -152,7 +163,7 @@ export default function Home() {
                                    </MainCircleLink>
                               </Box>
                          </Stack>
-                         <Box my="3em">
+                         <Box>
                               <SolutionCard my="30px" />
                          </Box>
                     </SectionLayout>
@@ -213,12 +224,26 @@ export default function Home() {
                          />
                     </Box>
                </SectionLayout>
+
+               <Box bgColor="mainBlack" width="100vw" overflow="hidden">
+                    <Box h="120px" />
+                    <SectionLayout>
+                         <SectionHeader
+                              miniTitle="MEET OUR PROFESSIONALS"
+                              headerTitle="Team that Builds Ideas Driven by the Future"
+                         />
+                         <Profiles />
+                    </SectionLayout>
+                    <Box h="120px" />
+               </Box>
+
                <SectionLayout>
                     <CountUpComp />
                     <Box h="100px" />
                     <Review />
                     <Box h="100px" position="relative" />
                     <ContactBanner href="/" />
+                    <Box h="100px" />
                </SectionLayout>
           </Box>
      );

@@ -1,7 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
 * {
+     font-family: "DM Sans", sans-serif;
      margin: 0;
      padding: 0;
      box-sizing: border-box;
+}
+
+body {
+     width: 100vw;
+     overflow-x: hidden;
 }
 
 a {
@@ -179,4 +187,61 @@ a {
      background-color: #888888 !important;
      width: 10px !important;
      height: 10px !important;
+}
+
+.profileIcon {
+     font-size: 20px;
+     &:hover {
+          color: orange;
+     }
+}
+
+.profileSwiper {
+     padding: 50px 0 !important;
+}
+
+.profile__card {
+     position: relative;
+     overflow: hidden;
+     .profile__picture {
+          transition: 0.3s ease;
+          transform: scale(1);
+     }
+
+     &:hover {
+          .profile__picture {
+               filter: blur(8px);
+               -webkit-filter: blur(2px);
+               transform: scale(1.1);
+          }
+
+          .profile__name,
+          .profile__role,
+          .profile__social {
+               transform: translateY(0);
+               opacity: 1;
+          }
+          .profile__role {
+               transition-delay: 0.1s;
+          }
+          .profile__social {
+               transition-delay: 0.2s;
+          }
+     }
+     .profile__name,
+     .profile__role,
+     .profile__social {
+          transform: translateY(30px);
+          transition: 0.3s ease;
+          opacity: 0;
+     }
+}
+
+@media (max-width: 790px) {
+     .profile__name,
+     .profile__role,
+     .profile__social {
+          transform: translateY(0) !important;
+          opacity: 1 !important;
+     }
 }

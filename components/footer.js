@@ -1,41 +1,53 @@
 import React from "react";
 import SectionLayout from "./layout/sectionLayout";
-import { Stack, Text } from "@chakra-ui/react";
+import { Stack, Text, Grid, GridItem, Box } from "@chakra-ui/react";
 
 const Footer = () => {
      return (
-          <SectionLayout>
-               <Stack direction={{ base: "column", md: "row" }} w="50%">
-                    <Text
-                         textStyle="title"
-                         textTransform="none"
-                         fontWeight="normal"
+          <Box backgroundColor="mainBlack" py="25px">
+               <SectionLayout>
+                    <Grid
+                         templateColumns={{
+                              base: "repeat(1,1fr)",
+                              lg: "repeat(2,1fr)",
+                         }}
                     >
-                         Copyright © 2022 Lorem ipsum dolor sit amet.
-                    </Text>
+                         <GridItem mb={{ base: "20px", lg: "0" }}>
+                              <Text
+                                   textStyle="title"
+                                   textTransform="none"
+                                   fontWeight="normal"
+                                   textAlign="center"
+                              >
+                                   Copyright © 2022 Lorem ipsum dolor sit amet.
+                                   All Rights Reserved
+                              </Text>
+                         </GridItem>
 
-                    <Stack
-                         direction="row"
-                         justifyContent="space-between"
-                         w="full"
-                    >
-                         <Text
-                              textStyle="title"
-                              textTransform="none"
-                              fontWeight="normal"
-                         >
-                              Privacy Policy
-                         </Text>{" "}
-                         <Text
-                              textStyle="title"
-                              textTransform="none"
-                              fontWeight="normal"
-                         >
-                              Terms of Use
-                         </Text>
-                    </Stack>
-               </Stack>
-          </SectionLayout>
+                         <GridItem>
+                              <Stack
+                                   direction="row"
+                                   justifyContent="space-evenly"
+                              >
+                                   <Text
+                                        textStyle="title"
+                                        textTransform="none"
+                                        fontWeight="normal"
+                                   >
+                                        Terms of Use
+                                   </Text>
+                                   <Text
+                                        textStyle="title"
+                                        textTransform="none"
+                                        fontWeight="normal"
+                                   >
+                                        Privacy Policy
+                                   </Text>
+                              </Stack>
+                         </GridItem>
+                    </Grid>
+               </SectionLayout>
+          </Box>
      );
 };
 
