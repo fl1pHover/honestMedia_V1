@@ -80,7 +80,7 @@ export default function Home() {
                <Box as="section" id="marquees">
                     <Marquees />
                </Box>
-
+               <Box h={{ base: "4em", md: "6em", lg: "8em" }} />
                <Box as="section" id="timeline">
                     <TimeLine />
                </Box>
