@@ -13,9 +13,9 @@ import {
      Link,
 } from "@chakra-ui/react";
 
-import { FaFacebookF } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/Fa";
+import { AiFillInstagram } from "react-icons/Ai";
+import { FaLinkedinIn } from "react-icons/Fa";
 import { AddIcon } from "@chakra-ui/icons";
 
 const footerIcon = [
