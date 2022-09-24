@@ -140,15 +140,13 @@ const Footer = () => {
                                                             <NextLink
                                                                  href="/"
                                                                  passHref
+                                                                 key={index}
                                                             >
                                                                  <Link
                                                                       fontSize="20px"
                                                                       _hover={{
                                                                            color: "mainOrange",
                                                                       }}
-                                                                      key={
-                                                                           index
-                                                                      }
                                                                  >
                                                                       {
                                                                            props.icons
