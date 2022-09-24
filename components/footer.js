@@ -10,8 +10,8 @@ import {
      Box,
      Image,
      Input,
+     Link,
 } from "@chakra-ui/react";
-import Link from "next/link";
 
 import { FaFacebookF } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
@@ -21,10 +21,10 @@ import { AddIcon } from "@chakra-ui/icons";
 const footerIcon = [
      {
           href: "/",
-          icons: "<FaFacebookF />",
+          icons: <FaFacebookF />,
      },
-     { href: "/", icons: "<AiFillInstagram />" },
-     { href: "/", icons: "<FaLinkedinIn />" },
+     { href: "/", icons: <AiFillInstagram /> },
+     { href: "/", icons: <FaLinkedinIn /> },
 ];
 
 const FooterLink = ({ linkText, href }) => {
@@ -48,19 +48,14 @@ const Footer = () => {
                <Box backgroundColor="mainBlack" py="25px">
                     <SectionLayout>
                          <Box h={{ base: "2em", md: "3em", lg: "4em" }} />
-                         <Grid
-                              templateColumns={{
-                                   base: "repeat(1,1fr)",
-                                   lg: "repeat(8,1fr)",
-                              }}
-                         >
-                              <GridItem colSpan={1}>
+                         <Grid templateColumns="repeat(8,1fr)">
+                              <GridItem colSpan={[8, 8, 2, 1]}>
                                    <Image
                                         src="./images/logo-1.png"
                                         alt="logo"
                                    />
                               </GridItem>
-                              <GridItem colSpan={2}>
+                              <GridItem colSpan={[8, 4, 3, 2]}>
                                    <Text
                                         textStyle="mainMediumText"
                                         fontWeight="bold"
@@ -87,7 +82,7 @@ const Footer = () => {
                                         />
                                    </Box>
                               </GridItem>
-                              <GridItem colSpan={2}>
+                              <GridItem colSpan={[8, 4, 3, 2]}>
                                    <Text
                                         textStyle="mainMediumText"
                                         fontWeight="bold"
@@ -108,7 +103,7 @@ const Footer = () => {
                                         </Text>
                                    </Box>
                               </GridItem>
-                              <GridItem colSpan={3}>
+                              <GridItem colSpan={[8, 8, 8, 3]}>
                                    <Text
                                         textStyle="mainMediumText"
                                         fontWeight="bold"
@@ -143,23 +138,21 @@ const Footer = () => {
                                                   ({ ...props }, index) => {
                                                        return (
                                                             <NextLink
-                                                                 href={
-                                                                      props.href
-                                                                 }
+                                                                 href="/"
                                                                  passHref
-                                                                 key={index}
                                                             >
                                                                  <Link
                                                                       fontSize="20px"
                                                                       _hover={{
                                                                            color: "mainOrange",
                                                                       }}
+                                                                      key={
+                                                                           index
+                                                                      }
                                                                  >
-                                                                      <a>
-                                                                           {
-                                                                                props.icon
-                                                                           }
-                                                                      </a>
+                                                                      {
+                                                                           props.icons
+                                                                      }
                                                                  </Link>
                                                             </NextLink>
                                                        );
