@@ -120,7 +120,6 @@ const Footer = () => {
                                         <Input
                                              variant="flushed"
                                              focusBorderColor="none"
-                                             placeholder="extra small size"
                                              w="100%"
                                              backgroundColor="transparent"
                                              borderBottomColor="mainGrey"
