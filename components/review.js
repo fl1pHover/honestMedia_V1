@@ -49,7 +49,7 @@ import { Pagination } from "swiper";
 
 const Review = () => {
      return (
-          <Box pos="relative">
+          <Box pos="relative" padding-bottom="100px">
                <Swiper
                     slidesPerView={1}
                     spaceBetween={30}

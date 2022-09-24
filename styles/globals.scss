@@ -245,3 +245,33 @@ a {
           opacity: 1 !important;
      }
 }
+
+.timeline__time {
+     position: relative;
+     &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: -200%;
+          width: 200vw;
+          height: 1px;
+          background: white;
+          opacity: 0.8;
+     }
+     &::after {
+          content: "";
+          position: absolute;
+          bottom: -12px;
+          left: 0;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          border-top: 13px solid white;
+     }
+}
+
+.footer__service {
+     cursor: pointer;
+     .plus__icon {
+          transform: scale(0);
+     }
+}

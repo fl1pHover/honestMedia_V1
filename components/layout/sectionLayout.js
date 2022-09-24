@@ -10,6 +10,7 @@ const SectionLayout = ({ children }) => {
                     md: "md__container",
                     xl: "main__container",
                }}
+               // my={{ base: "4em", md: "6em", lg: "7em" }}
           >
                {/* <Box h="100px" /> */}
                {children}

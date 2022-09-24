@@ -8,6 +8,7 @@ import {
      Center,
      useColorModeValue,
      Button,
+     IconButton,
 } from "@chakra-ui/react";
 import { Search2Icon, HamburgerIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
@@ -63,20 +64,25 @@ const Navbar = (props) => {
                                    Portfolio
                               </LinkItem>
                          </Box>
-                         <Stack direction="row" alignItems="center" spacing={8}>
-                              <Icon as={Search2Icon} w={5} h={5} />
-                              <Icon as={Search2Icon} w={5} h={5} />
-
-                              <Button leftIcon={<Search2Icon />}>
-                                   {" "}
-                                   <Center
-                                        p={4}
-                                        bgColor="mainGrey"
-                                        rounded="50%"
-                                   >
-                                        <Icon as={HamburgerIcon} w={6} h={6} />
-                                   </Center>
-                              </Button>
+                         <Stack direction="row" alignItems="center" spacing={5}>
+                              <IconButton
+                                   aria-label="Menu"
+                                   icon={<Search2Icon />}
+                                   borderRadius="50%"
+                                   fontSize="18px"
+                                   bg="tranparent"
+                                   _hover={{
+                                        bgColor: "transparent",
+                                   }}
+                              />
+                              <IconButton
+                                   aria-label="Menu"
+                                   icon={<HamburgerIcon />}
+                                   borderRadius="50%"
+                                   w="60px"
+                                   h="60px"
+                                   fontSize="25px"
+                              />
                          </Stack>
                     </Stack>
                </Box>
