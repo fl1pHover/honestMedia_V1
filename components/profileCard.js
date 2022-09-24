@@ -14,101 +14,103 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 const ProfileCard = ({ href, fbHref, iglHref, linkedHref, name, role }) => {
      return (
-          <NextLink href={href} passHref>
-               <Link
-                    textStyle="mainLink"
-                    _hover={{
-                         textDecoration: "none",
-                    }}
-               >
-                    <Box
-                         display="flex"
-                         className="profile__card"
-                         bgSize="cover"
-                         bgPosition="center"
-                         height={{ base: "400px", sm: "350px" }}
-                         width="90%"
-                         // w="410px"
+          <>
+               <NextLink href={href} passHref>
+                    <Link
+                         textStyle="mainLink"
+                         _hover={{
+                              textDecoration: "none",
+                         }}
                     >
-                         <Image
-                              src="/images/pro/pro3.jpg"
-                              objectFit="cover"
-                              alt="profile picture"
-                              pos="absolute"
-                              top="0"
-                              left="0"
-                              height="100%"
-                              width="100%"
-                              className="profile__picture"
-                         />
                          <Box
-                              pb="3em"
-                              pl="3em"
                               display="flex"
-                              flexDirection="column"
-                              justifyContent="flex-end"
-                              textAlign="left"
-                              zIndex="1"
-                              className="profile__info"
+                              className="profile__card"
+                              bgSize="cover"
+                              bgPosition="center"
+                              height={{ base: "400px", sm: "350px" }}
+                              width="90%"
+                              // w="410px"
                          >
-                              <Text
-                                   as="h4"
-                                   fontSize="24px"
-                                   fontWeight="bold"
-                                   textTransform="none"
-                                   className="profile__name"
+                              <Image
+                                   src="/images/pro/pro3.jpg"
+                                   objectFit="cover"
+                                   alt="profile picture"
+                                   pos="absolute"
+                                   top="0"
+                                   left="0"
+                                   height="100%"
+                                   width="100%"
+                                   className="profile__picture"
+                              />
+                              <Box
+                                   pb="3em"
+                                   pl="3em"
+                                   display="flex"
+                                   flexDirection="column"
+                                   justifyContent="flex-end"
+                                   textAlign="left"
+                                   zIndex="1"
+                                   className="profile__info"
                               >
-                                   {name}
-                              </Text>
-                              <Text
-                                   as="h6"
-                                   textStyle="title"
-                                   textTransform="none"
-                                   color="white"
-                                   className="profile__role"
-                              >
-                                   {role}
-                              </Text>
-                              <Stack
-                                   direction="row"
-                                   mt="20px"
-                                   className="profile__social"
-                              >
-                                   <NextLink href={fbHref} passHref>
-                                        <Link
-                                             fontSize="20px"
-                                             _hover={{
-                                                  color: "mainOrange",
-                                             }}
-                                        >
-                                             <FaFacebookF />
-                                        </Link>
-                                   </NextLink>
-                                   <NextLink href={iglHref} passHref>
-                                        <Link
-                                             fontSize="20px"
-                                             _hover={{
-                                                  color: "mainOrange",
-                                             }}
-                                        >
-                                             <AiFillInstagram />
-                                        </Link>
-                                   </NextLink>
-                                   <NextLink href={linkedHref} passHref>
-                                        <Link
-                                             fontSize="20px"
-                                             _hover={{
-                                                  color: "mainOrange",
-                                             }}
-                                        >
-                                             <FaLinkedinIn />
-                                        </Link>
-                                   </NextLink>
-                              </Stack>
+                                   <Text
+                                        as="h4"
+                                        fontSize="24px"
+                                        fontWeight="bold"
+                                        textTransform="none"
+                                        className="profile__name"
+                                   >
+                                        {name}
+                                   </Text>
+                                   <Text
+                                        as="h6"
+                                        textStyle="title"
+                                        textTransform="none"
+                                        color="white"
+                                        className="profile__role"
+                                   >
+                                        {role}
+                                   </Text>
+                                   <Stack
+                                        direction="row"
+                                        mt="20px"
+                                        className="profile__social"
+                                   >
+                                        {/* <NextLink href={fbHref} passHref>
+                                             <Link
+                                                  fontSize="20px"
+                                                  _hover={{
+                                                       color: "mainOrange",
+                                                  }}
+                                             >
+                                                  <FaFacebookF />
+                                             </Link>
+                                        </NextLink>
+                                        <NextLink href={iglHref} passHref>
+                                             <Link
+                                                  fontSize="20px"
+                                                  _hover={{
+                                                       color: "mainOrange",
+                                                  }}
+                                             >
+                                                  <AiFillInstagram />
+                                             </Link>
+                                        </NextLink>
+                                        <NextLink href={linkedHref} passHref>
+                                             <Link
+                                                  fontSize="20px"
+                                                  _hover={{
+                                                       color: "mainOrange",
+                                                  }}
+                                             >
+                                                  <FaLinkedinIn />
+                                             </Link>
+                                        </NextLink> */}
+                                   </Stack>
+                              </Box>
                          </Box>
-                    </Box>
-               </Link>
-          </NextLink>
+                    </Link>
+               </NextLink>
+          </>
      );
 };
 
