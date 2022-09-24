@@ -148,6 +148,7 @@ const Footer = () => {
                                                                       props.href
                                                                  }
                                                                  passHref
+                                                                 key={index}
                                                             >
                                                                  <Link
                                                                       fontSize="20px"
