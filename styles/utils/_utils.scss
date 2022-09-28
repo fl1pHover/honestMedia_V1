@@ -1,0 +1,38 @@
+.menu__btn {
+     position: relative;
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     background-color: #272728;
+     cursor: pointer;
+     &:hover {
+          .menu__btn-wrap {
+               span {
+                    transform: translateY(10px);
+               }
+          }
+     }
+     .menu__btn-wrap {
+          overflow: hidden;
+          position: relative;
+          span {
+               height: 2px;
+               width: 18px;
+               background: white;
+               margin: 3px 0 !important;
+               transition: 0.3s ease;
+               // transform: translateY(4px);
+               &:first-child {
+                    &::before {
+                         content: "";
+                         position: absolute;
+                         top: -8px;
+                         left: 0;
+                         width: 18px;
+                         height: 2px;
+                         background-color: white;
+                    }
+               }
+          }
+     }
+}

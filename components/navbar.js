@@ -17,8 +17,6 @@ import {
 import { Search2Icon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
 
-import { motion } from "framer-motion";
-
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 import { FaFacebookF } from "react-icons/fa";
@@ -118,17 +116,22 @@ const Navbar = (props) => {
                                    _hover={{
                                         bgColor: "transparent",
                                    }}
-                              />
-                              <IconButton
-                                   aria-label="Menu"
-                                   icon={<HamburgerIcon />}
-                                   borderRadius="50%"
-                                   w="60px"
-                                   h="60px"
-                                   bg="mainGrey"
-                                   fontSize="25px"
+                              />{" "}
+                              <Center
+                                   className="menu__btn"
                                    onClick={showSidebar}
-                              />
+                              >
+                                   <Stack
+                                        position="relative"
+                                        className="menu__btn-wrap"
+                                        overflow="hidden"
+                                   >
+                                        {/* <span></span> */}
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                   </Stack>
+                              </Center>
                          </Stack>
                     </Stack>
                </Box>
@@ -140,9 +143,7 @@ const Navbar = (props) => {
                     p="50px"
                     bg="mainBlack"
                     height="100vh"
-                    className={sidebar ? "sidebar active" : "sidebar"}
-                    animate={sidebar ? "open" : "closed"}
-                    variants={variants}
+                    className={sidebar ? "sidebar" : "sidebar active"}
                     zIndex="101"
                >
                     <IconButton
@@ -161,6 +162,7 @@ const Navbar = (props) => {
                          }}
                          onClick={showSidebar}
                     />
+
                     <Image
                          src="./images/logo-1.png"
                          alt="logo"

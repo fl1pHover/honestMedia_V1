@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
-
+@import "utils";
 * {
      font-family: "DM Sans", sans-serif;
      margin: 0;
@@ -283,12 +283,21 @@ a {
 .sidebar {
      transform: translateX(150%);
      animation: 0.5s opacity ease forwards;
+     // &::before {
+     //      content: "";
+     //      position: absolute;
+     //      left: -100vw;
+     //      top: 0;
+     //      height: 100vw;
+     //      width: 100vw;
+     //      height: 100vw;
+     //      background-color: #0e0e0e;
+     //      opacity: 0.5;
+     // }
 }
 
 .active {
      animation: 0.5s opacityOut ease;
-     // display: block !important;
-     // transform: translateX(0%);
 }
 
 @keyframes opacity {
@@ -306,11 +315,11 @@ a {
      0% {
           opacity: 1;
           transform: translateX(0%);
-          opacity: 1;
-          transform: translateX(0%);
      }
      100% {
           opacity: 0;
           transform: translateX(150%);
      }
+}
+.menu__btn {
 }
