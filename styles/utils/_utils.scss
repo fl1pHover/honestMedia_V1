@@ -36,3 +36,40 @@
           }
      }
 }
+
+.mobilebar {
+     display: block;
+}
+.menu__btn-mobile {
+     position: absolute;
+     top: 30px;
+     right: -10%;
+     display: flex;
+     display: none;
+     span {
+          width: 22px;
+          height: 4px;
+          background: white;
+          margin: 2px 0 !important;
+          border-radius: 5px;
+          &:nth-child(1) {
+               transform: translateY(8px) rotate(45deg);
+          }
+          &:nth-child(2) {
+               animation: 1s closebtn2 ease forwards;
+               animation-delay: 1s;
+          }
+          &:nth-child(3) {
+               transform: translateY(-8px) rotate(-45deg);
+          }
+     }
+}
+
+@keyframes closebtn2 {
+     0% {
+          opacity: 1;
+     }
+     100% {
+          opacity: 0;
+     }
+}
