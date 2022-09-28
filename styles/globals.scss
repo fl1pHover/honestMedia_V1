@@ -275,3 +275,42 @@ a {
           transform: scale(0);
      }
 }
+
+.background__text {
+     -webkit-background-clip: text;
+}
+
+.sidebar {
+     transform: translateX(150%);
+     animation: 0.5s opacity ease forwards;
+}
+
+.active {
+     animation: 0.5s opacityOut ease;
+     // display: block !important;
+     // transform: translateX(0%);
+}
+
+@keyframes opacity {
+     0% {
+          opacity: 0;
+          transform: translateX(150%);
+     }
+
+     100% {
+          opacity: 1;
+          transform: translateX(0%);
+     }
+}
+@keyframes opacityOut {
+     0% {
+          opacity: 1;
+          transform: translateX(0%);
+          opacity: 1;
+          transform: translateX(0%);
+     }
+     100% {
+          opacity: 0;
+          transform: translateX(150%);
+     }
+}

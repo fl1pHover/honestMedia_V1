@@ -146,15 +146,24 @@ const TimelineItem = () => {
 const Timeline = () => {
      return (
           <SectionLayout>
+               <Text
+                    textStyle="clipText"
+                    bgImage="url('./images/text-bg.jpg')"
+                    // backgroundClip="text"
+                    className="background__text"
+               >
+                    Our Awards
+               </Text>
                <Box
                     mr={{ base: "0", xl: "-30%" }}
                     pb="50px"
                     // w="410px"
                >
-                    <SectionHeader
+                    {/* <SectionHeader
                          miniTitle="OUR LATEST PROJECTS"
                          headerTitle="We Work to Craft Solid Products and Services For You"
-                    />
+                    /> */}
+
                     <Box h="50px" />
 
                     <TimelineItem />
