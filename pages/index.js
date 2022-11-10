@@ -1,24 +1,8 @@
-import Head from "next/head";
-
-import {
-     Heading,
-     Stack,
-     Center,
-     Box,
-     Text,
-     Container,
-     Link,
-     Grid,
-     GridItem,
-     изт,
-} from "@chakra-ui/react";
-import NextLink from "next/link";
+import { Box } from "@chakra-ui/react";
 
 // Main Circle Links
-import MainCircleLink from "../components/utils/mainLink";
 
 // Mainsection Layout
-import SectionHeader from "../components/utils/sectionHeader";
 
 import SectionLayout from "../components/layout/sectionLayout";
 
@@ -34,8 +18,6 @@ import Marquees from "../components/utils/marquee";
 
 import TimeLine from "../components/timeline";
 
-import Project from "../components/utils/project";
-
 import CountUpComp from "../components/countup";
 
 import Review from "../components/review";
@@ -43,10 +25,12 @@ import Review from "../components/review";
 import ContactBanner from "../components/contactBanner";
 
 import Profiles from "../components/profileCard";
+import ScrollTop from "../util/scrollTop";
 
 export default function Home() {
      return (
           <Box as="main">
+               <ScrollTop />
                {/* Center all of container */}
                <Box
                     as="section"

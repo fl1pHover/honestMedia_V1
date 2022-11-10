@@ -1,29 +1,23 @@
-import React, { useState } from "react";
+import { CloseIcon, HamburgerIcon, Search2Icon } from "@chakra-ui/icons";
 import {
      Box,
-     Stack,
-     Image,
-     Link,
-     Icon,
      Center,
-     useColorModeValue,
-     Button,
      IconButton,
+     Image,
+     Input,
+     Link,
+     ListItem,
+     Stack,
      Text,
      UnorderedList,
-     ListItem,
-     Input,
-     GridItem,
 } from "@chakra-ui/react";
-import { Search2Icon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
+import React, { useState } from "react";
 
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
-import { FaFacebookF } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
-import { AddIcon } from "@chakra-ui/icons";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 import SectionLayout from "./layout/sectionLayout";
 
@@ -89,6 +83,7 @@ const Navbar = (props) => {
                                         fontWeight="bold"
                                         color="white"
                                         onClick={showMobilebar}
+                                        cursor="pointer"
                                    />
                               </Box>
                               <Box w="50%" textAlign="center">
@@ -116,6 +111,7 @@ const Navbar = (props) => {
                          <Stack
                               className="menu__btn-mobile"
                               onClick={showMobilebar}
+                              cursor="pointer"
                          >
                               <span></span>
                               <span></span>
@@ -161,6 +157,13 @@ const Navbar = (props) => {
                                         href="/portfolio"
                                         path={path}
                                         text="Portfolio"
+                                   >
+                                        <ChevronDownIcon />
+                                   </LinkItem>
+                                   <LinkItem
+                                        href="/second"
+                                        path={path}
+                                        text="lorem"
                                    >
                                         <ChevronDownIcon />
                                    </LinkItem>

@@ -6,6 +6,9 @@
      padding: 0;
      box-sizing: border-box;
 }
+html {
+     user-select: none;
+}
 
 body {
      width: 100vw;
@@ -246,6 +249,9 @@ a {
      }
 }
 
+.swiper {
+     overflow: visible !important;
+}
 .timeline__time {
      position: relative;
      &::before {

@@ -1,5 +1,5 @@
-import React, { Children } from "react";
 import { Box, Stack, Text } from "@chakra-ui/react";
+import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -8,7 +8,6 @@ import "swiper/css/pagination";
 
 import { Navigation } from "swiper";
 
-import SectionHeader from "../components/utils/sectionHeader";
 import SectionLayout from "./layout/sectionLayout";
 
 const awarddb = [
@@ -65,7 +64,7 @@ const TimelineItem = () => {
                               slidesPerView: 3,
                          },
                          1280: {
-                              slidesPerView: 4,
+                              slidesPerView: 5,
                          },
                     }}
                >
